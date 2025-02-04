@@ -8,6 +8,9 @@ class Router {
     public static function get($uri, $controller) {
         self::$routes['GET'][$uri] = $controller;
     }
+    public static function post($uri, $controller) {
+        self::$routes['POST'][$uri] = $controller;
+    }
 
     public static function dispatch($uri) {
         $method = $_SERVER['REQUEST_METHOD'];
